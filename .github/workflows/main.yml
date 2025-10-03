@@ -1,0 +1,24 @@
+name: Sample-test
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Sample-test-jobs:
+    runs-on: ubutnu-latest
+    steps:
+        - name: Install repo to vm
+          uses: actions/checkout@v4
+
+        - name: Installs nodejs
+          uses: actions/setup-node@v4
+
+        - name: Install dependencies
+          run: npm install
+
+        - name: Run build command
+          run: npm build
+
+        - name: Run test command
+          run: npm test
