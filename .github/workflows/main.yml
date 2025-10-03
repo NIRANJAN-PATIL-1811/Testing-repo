@@ -4,23 +4,25 @@ on:
   push:
     branches:
       - main
+
 jobs:
   Sample-test-jobs:
     runs-on: ubuntu-latest
+
     steps:
-        - name: Install repo to vm
-          uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        - name: Installs nodejs
-          uses: actions/setup-node@v4
-          with:
-            node-version: '18'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-        - name: Install dependencies
-          run: npm install
+      - name: Install dependencies
+        run: npm install
 
-        - name: Run build command
-          run: npm run build
+      - name: Run build command
+        run: npm run build
 
-        - name: Run test command
-          run: npm test
+      - name: Run test command
+        run: npm test
