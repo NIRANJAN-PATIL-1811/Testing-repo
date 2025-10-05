@@ -1,0 +1,60 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.list-parent-div {
+  height: 10%;
+  width: 100%;
+  /* background-color: red; */
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(121, 121, 121, 0.5);
+  padding-bottom: 0.5vh;
+  padding-top: 0.5vh;
+}
+
+@media (max-width: 400px) {
+  .list-parent-div {
+    gap: 1vw;
+  }
+}
+
+.list-child-1 {
+  height: 100%;
+  width: 80%;
+  /* background-color: yellow; */
+  overflow-y: scroll;
+}
+
+.list-child-2 {
+  height: 70%;
+  width: 10%;
+  background-color: rgba(218, 221, 30, 0.34);
+}
+
+.list-child-3 {
+  height: 70%;
+  width: 10%;
+  background-color: rgba(30, 221, 30, 0.340);
+}
+
+.list-child-4 {
+  height: 70%;
+  width: 10%;
+  /* background-color: rgba(221, 30, 30, 0.34); */
+}
+
+.list-child-2, .list-child-3, .list-child-4 {
+  border: 1px solid rgba(121, 121, 121, 0.5);
+}
+
+.list-child-1, .list-child-2, .list-child-3, .list-child-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
