@@ -18,10 +18,16 @@ jobs:
         uses: actions/setup-nodejs@v4
 
       - name: Installing dependencies
-        run: npm install
+        run: |
+            cd front-end
+            npm install
 
       - name: Building
-        run: npm run build
+        run: |
+            cd front-end
+            npm run build
 
       - name: Testing
-        run: npm test
+        run: |
+            cd front-end
+            npm test
