@@ -52,6 +52,7 @@ html, body {
 .child-2-input {
   height: 90%;
   width: 74%;
+  font-size: medium;
 }
 
 .child-2-add-button {
